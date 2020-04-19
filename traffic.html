@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="style3.css">
+	<img src="download.png">
+</head>
+<body>
+
+	<img src="goi.jpg" style="float: right;">
+	<script>
+
+		function validate() {
+			
+
+			
+
+			var uname = document.f1.uname.value;
+			var fname = document.f1.fname.value;
+			var mname = document.f1.mname.value;
+			var lname = document.f1.lname.value;
+			var pincode=document.f1.pincode.value;
+			var state=document.f1.state.value;
+			var mno = document.f1.mno.value;
+			var email = document.f1.email.value;
+			var ra = document.f1.ra.value;
+			var dl=document.f1.dl.value;
+            if(uname == ""||fname == ""||mname == ""||lname == ""||state == ""||pincode == ""||mno == ""||email == ""||ra == ""||dl =="") {
+            	alert("All fields must be filled out");
+            	return false;
+            }
+            
+            if(mno.length!=10){
+            	alert("Enter a valid mobile number");
+  	            return false;
+            }
+            
+           
+
+
+            }
+        
+            
+        
+	</script>
+
+	<h2><center><b>USER REGISTRATION</b></center></h2>
+	<h3>Personal information</h3>
+	<form name="f1" action="one.php" onsubmit="return validate()">
+		Username *
+			<input type="email" name="uname"><br>
+        Title
+        <select><br>
+        	<option value="Mrs">Mrs.</option>
+        	<option value="Mr">Mr.</option>
+        	<option value="Miss">Miss.</option>
+        	<option value="Dr">Dr.</option>
+        </select><br>
+        First name *
+        <input type="text" name="fname"><br>
+        Middle name 
+        <input type="text" name="mname"><br>
+        Last name *
+        <input type="text" name="lname"><br>
+        State *
+        <input type="text" name="state"><br>
+        Pincode *
+        <input type="number" name="pincode" maxlength="6"><br>
+        Vehicle *
+        <select><br>
+        	<option>Car</option>
+        	<option>Bike</option>
+        	<option>Scooter</option>
+        	<option>Lorry</option>
+        </select><br>
+        Driving license ID
+        <input type="varchar" name="dl"><br>
+        <h3>Contact information</h3>
+        Mobile number *
+        <input type="text" name="mno"><br>
+        Email address *
+        <input type="Email" name="email"><br>
+        Registered address *
+        <input type="text" name="ra"><br>
+        <br>
+        Preffered communication language
+        <input type="radio" name="pc">English
+        <input type="radio" name="pc">Tamil<br>
+        <br>
+        Preffered communication medium
+        <input type="radio" name="pcm">SMS
+        <input type="radio" name="pcm">Email<br>
+        <br>
+        My information can be passed onto third party organizations
+        <input type="radio" name="tp">Yes
+        <input type="radio" name="tp">No<br>
+        <br>
+        <input type="submit" value="PROCEED">
+        <input type="reset" value="RESET">
+        
+</form>
+</body>
+</html> 
+		

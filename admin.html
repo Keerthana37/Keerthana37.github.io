@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ADMIN</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<link rel="stylesheet" type="text/css" href="style3.css">
+<body>
+	
+	<script type="text/javascript">
+
+		function validate2() {
+
+			
+
+			var uname = document.f2.name.value;
+			var pname = document.f2.pname.value;
+			var state = document.f2.state.value;
+			var stnum = document.f2.stnum.value;
+			var pin=document.f2.pin.value;
+			var mob=document.f2.mob.value;
+			pc=document.f2.pc.value;
+		    rpc = document.f2.rpc.value;
+			if(pc!=rpc){
+				window.alert("No password match....enter the same in both")
+		        return false;
+		    }
+			if(uname == ""||pname == ""||stnum == ""||pin == ""||state == ""||mob == ""||pc == ""||rpc == ""){
+				alert("Enter all the fields");
+				return false;
+			}
+			if(pin.length!=6){
+				alert("Enter exactly 6 digits");
+				return false;
+			}
+			if(mob.length!=10 && mob.length!=8){
+				alert("Enter 8 or 10 digit number")
+				window.focus();
+				return false;
+			}
+			
+		}
+
+	</script>
+	<h2>ADMIN REGISTRATION</h2>
+	<form method="post" name="f2" action="creationsuccess.html" onsubmit="return validate2()">
+		Username *
+		<input type="email" name="name"><br>
+		Name of the police station
+		<input type="text" name="pname"><br>
+		State 
+		<input type="text" name="state"><br>
+		Station number 
+		<input type="text" name="stnum" maxlength="2"><br>
+		Pincode *
+		<input type="number" name="pin"><br>
+		Mobile number *
+		<input type="number" name="mob" maxlength="10"><br>
+		Passcode *
+        <input type="password" name="pc"><br>
+        Re-enter Passcode
+        <input type="password" name="rpc"><br>
+        <br>
+        <input type="submit" value="GO" onclick="creationsuccess.html" >
+        <input type="reset" value="RESET">
+        
+        
+	</form><script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>creating password</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="style3.css">
+	<img src="download.png">
+</head>
+<body>
+	<img src="goi.jpg" style="float: right;">
+	<script type="text/javascript">
+	function validate1() {
+		
+		pw= document.f2.pw.value;
+	    rpw =document.f2.rpw.value;
+		if(pw==""){
+			window.alert("Fill out new password field");
+			return false;
+		}
+		if(rpw==""){
+			window.alert("Fill out re-enter password field");
+		return false;
+		}
+		if(pw!=rpw){
+			window.alert("No password match....enter the same in both")
+		return false;
+		}
+		return true;
+	}
+	</script>
+
+	<h3>Create a password</h3>
+	<form name="f2"  method="post" action="creationsuccess.html" onsubmit="return validate1()">
+		New Password:
+		<input type="password" name="pw"><br>
+		Re-enter Password:
+		<input type="password" name="rpw"><br>
+		<br>
+		<a href="traffic.html">New User?<br>
+        <input type="submit" value="CREATE">
+    </form>
+</body>
+</html>

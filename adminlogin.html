@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>admin login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="trafficstyles.css">
+	<script type="text/javascript">
+		function val1() {
+			var uname = document.p1.uname.value;
+		    var pw = document.p1.pw.value;
+		    if(uname == ""||pw== ""){
+			    alert("All fields must be filled out");
+                return false;
+		    }
+        }
+		
+	</script>
+</head>
+<body>
+	<h2>Enter a valid one</h2>
+	<form method="post"  name="p1" onsubmit="functions.html" action="login.php" onsubmit="return val1()" >
+		Username *
+		<input type="text" name="uname">
+		Passcode *
+		<input type="password" name="pw">
+	    <button class="btn btn-primary">GO</button>
+	</form>
+
+</body>
+</html>
